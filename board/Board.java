@@ -1,4 +1,4 @@
-package tabuleiro;
+package board;
 
 public class Board {
 
@@ -33,6 +33,11 @@ public class Board {
 
     public Piece piece(Position pos) {
         return pieces[pos.getRow()][pos.getColuna()];
+    }
+
+    public void placePiece(Piece piece, Position pos) {
+        pieces[pos.getRow()][pos.getColuna()] = piece;
+        piece.position = pos;
     }
 
 

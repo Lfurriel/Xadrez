@@ -1,4 +1,4 @@
-package tabuleiro;
+package board;
 
 public class Piece {
 

@@ -1,4 +1,4 @@
-package tabuleiro;
+package board;
 
 public class Position {
     private  int column, row;
