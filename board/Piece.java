@@ -14,7 +14,7 @@ public abstract class Piece {
         return board;
     }
 
-    public abstract boolean[][] possibleMoves(); //Preenche uma matriz com verdadeir/falso dos movimentos possíveis
+    public abstract boolean[][] possibleMoves(); //Preenche uma matriz com verdadeiro/falso dos movimentos possíveis
 
     public boolean possibleMove(Position pos) {
         return possibleMoves()[pos.getRow()][pos.getColumn()];
