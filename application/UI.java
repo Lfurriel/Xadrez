@@ -50,10 +50,12 @@ public class UI {
     public static void printMatch(ChessMatch match, List<ChessPiece> captured) {
         printBoard(match.getPieces());
         printCapturedPieces(captured);
-        System.out.println("\nTurno: " + match.getTurn() + "\nJogam as " + match.getCurrentPalyer());
-
-        if(match.getCheck())
-            System.out.println("XEQUE!");
+        if(!match.getCheckMate()) {
+            System.out.println("\nTurno: " + match.getTurn() + "\nJogam as " + match.getCurrentPalyer());
+            if(match.getCheck())
+                System.out.println("XEQUE!");
+        } else
+            System.out.println("XEQUE-MATE!\nVENCEDOR: " + match.getCurrentPalyer());
     }
 
     public static void printBoard(ChessPiece[][] pieces) {
