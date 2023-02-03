@@ -3,8 +3,7 @@ package chess;
 import board.Board;
 import board.Piece;
 import board.Position;
-import chess.pieces.King;
-import chess.pieces.Rook;
+import chess.pieces.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -190,21 +189,50 @@ public class ChessMatch {
 
     private void initialSetup() {
 
-//        //Inicializando Torres
-//        placeNewPiece('a', 1, new Rook(board, Color.BRANCAS));
-//        placeNewPiece('h', 1, new Rook(board, Color.BRANCAS));
-//        placeNewPiece('a', 8, new Rook(board, Color.PRETAS));
-//        placeNewPiece('h', 8, new Rook(board, Color.PRETAS));
-//
-//        //Inicializando Reis
-//        placeNewPiece('e', 1, new King(board, Color.BRANCAS));
-//        placeNewPiece('e', 8, new King(board, Color.PRETAS));
+        //Inicializando Reis
+        placeNewPiece('e', 1, new King(board, Color.BRANCAS));
+        placeNewPiece('e', 8, new King(board, Color.PRETAS));
 
-        placeNewPiece('a', 8, new King(board, Color.PRETAS));
-        placeNewPiece('a', 1, new King(board, Color.BRANCAS));
+        //Inicializando Rainhas
+        placeNewPiece('d', 1, new Queen(board, Color.BRANCAS));
+        placeNewPiece('d', 8, new Queen(board, Color.PRETAS));
+
+        //Inicializando Torres
+        placeNewPiece('a', 1, new Rook(board, Color.BRANCAS));
         placeNewPiece('h', 1, new Rook(board, Color.BRANCAS));
-        placeNewPiece('g', 7, new Rook(board, Color.BRANCAS));
+        placeNewPiece('a', 8, new Rook(board, Color.PRETAS));
         placeNewPiece('h', 8, new Rook(board, Color.PRETAS));
+
+        //Inicializando Peões
+        placeNewPiece('a', 2, new Pawn(board, Color.BRANCAS));
+        placeNewPiece('b', 2, new Pawn(board, Color.BRANCAS));
+        placeNewPiece('c', 2, new Pawn(board, Color.BRANCAS));
+        placeNewPiece('d', 2, new Pawn(board, Color.BRANCAS));
+        placeNewPiece('e', 2, new Pawn(board, Color.BRANCAS));
+        placeNewPiece('f', 2, new Pawn(board, Color.BRANCAS));
+        placeNewPiece('g', 2, new Pawn(board, Color.BRANCAS));
+        placeNewPiece('h', 2, new Pawn(board, Color.BRANCAS));
+        placeNewPiece('a', 7, new Pawn(board, Color.PRETAS));
+        placeNewPiece('b', 7, new Pawn(board, Color.PRETAS));
+        placeNewPiece('c', 7, new Pawn(board, Color.PRETAS));
+        placeNewPiece('d', 7, new Pawn(board, Color.PRETAS));
+        placeNewPiece('e', 7, new Pawn(board, Color.PRETAS));
+        placeNewPiece('f', 7, new Pawn(board, Color.PRETAS));
+        placeNewPiece('g', 7, new Pawn(board, Color.PRETAS));
+        placeNewPiece('h', 7, new Pawn(board, Color.PRETAS));
+
+        //Inicializando Bispos
+        placeNewPiece('c', 1, new Bishop(board, Color.BRANCAS));
+        placeNewPiece('f', 1, new Bishop(board, Color.BRANCAS));
+        placeNewPiece('c', 8, new Bishop(board, Color.PRETAS));
+        placeNewPiece('f', 8, new Bishop(board, Color.PRETAS));
+
+        //Inicializando Cavalos
+        placeNewPiece('b', 1, new Knight(board, Color.BRANCAS));
+        placeNewPiece('g', 1, new Knight(board, Color.BRANCAS));
+        placeNewPiece('b', 8, new Knight(board, Color.PRETAS));
+        placeNewPiece('g', 8, new Knight(board, Color.PRETAS));
+
 
 
     }
