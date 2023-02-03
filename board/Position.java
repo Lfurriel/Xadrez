@@ -1,18 +1,18 @@
 package board;
 
 public class Position {
-    private  int column, row;
+    private int column, row;
 
-    public Position(int linha, int coluna) {
-        this.column = coluna;
-        this.row = linha;
+    public Position(int row, int column) {
+        this.column = column;
+        this.row = row;
     }
 
     public int getColumn() {
         return column;
     }
 
-    public void setColuna(int coluna) {
+    public void setColumn(int coluna) {
         this.column = coluna;
     }
 
@@ -22,6 +22,11 @@ public class Position {
 
     public void setRow(int row) {
         this.row = row;
+    }
+
+    public void setValues(int row, int column) {
+        this.row = row;
+        this.column = column;
     }
 
     @Override
