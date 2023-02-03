@@ -51,6 +51,9 @@ public class UI {
         printBoard(match.getPieces());
         printCapturedPieces(captured);
         System.out.println("\nTurno: " + match.getTurn() + "\nJogam as " + match.getCurrentPalyer());
+
+        if(match.getCheck())
+            System.out.println("XEQUE!");
     }
 
     public static void printBoard(ChessPiece[][] pieces) {
