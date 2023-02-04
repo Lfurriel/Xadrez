@@ -99,8 +99,8 @@ public class UI {
 
     private static void printCapturedPieces(List<ChessPiece> captured) {
 
-        List<ChessPiece> white = captured.stream().filter(x -> x.getColor() == Color.BRANCAS).toList();
-        List<ChessPiece> black = captured.stream().filter(x -> x.getColor() == Color.PRETAS).toList();
+        List<ChessPiece> white = captured.stream().filter(x -> x.getColor() == Color.BRANCAS).collect(Collectors.toList());
+        List<ChessPiece> black = captured.stream().filter(x -> x.getColor() == Color.PRETAS).collect(Collectors.toList());
         System.out.println("\nPeças capturadas: ");
         System.out.print(ANSI_CYAN);
         System.out.println("Brancas: "  + Arrays.toString(white.toArray()));

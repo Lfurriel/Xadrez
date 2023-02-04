@@ -38,6 +38,14 @@ public class Program {
 
                 if(capturedPiece != null)
                         captured.add(capturedPiece);
+                if(match.getPromoted() != null) {
+                    String type;
+                    do {
+                        System.out.print("DIGITE A PEÇA PARA PROMOÇÃO (Q/N/B/R): ");
+                        type = sc.nextLine();
+                    } while ((!type.equals("B") && !type.equals("Q") && !type.equals("N") && !type.equals("R")));
+                    match.replacePromotedPiece(type.toUpperCase());
+                }
 
             } catch (ChessException | InputMismatchException e) {
                 System.out.println(e.getMessage());
